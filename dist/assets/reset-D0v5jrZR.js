@@ -1,0 +1,1 @@
+import{t as e}from"./main-DypJRSi4.js";var t=document.getElementById(`resetpasswordform`),n=document.getElementById(`msg`);t.addEventListener(`submit`,t=>{t.preventDefault();let r=document.getElementById(`resetemail`).value.trim(),{resetPassword:i}=e();i(r,n)});

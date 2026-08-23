@@ -94,7 +94,7 @@ export function Chatroom(room, username) {
                     return;
                 }
 
-                getdatas.forEach(async (getdatas) => {
+                getdatas.forEach(async (getdata) => {
                     await deleteDoc(doc(db, 'chats', getdata.id));
                 });
 
