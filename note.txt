@@ -1,0 +1,155 @@
+
+https://firebase.google.cn/    > Docs >  Overview >  Firebase fundamentals >  Get started with Firebase for Web >  Add Firebase to your JavaScript project > Cloud Firestore for Web
+
+npm init -y
+
+npm install firebase or  npm install firebase@latest
+
+---------------------------------------------------------
+
+=> How to use Vite
+
+1. Install
+    npm install --save-dev vite
+
+2. Create a vite.config.js file
+    import { defineConfig } from 'vite';
+    export default defineConfig({
+        root:'./src',
+        build: {
+            outDir: '../dist', 
+        }
+    });
+
+3. Update package.json
+        "scripts": {
+            "dev": "vite",
+            "build": "vite build"
+  }
+
+4. Run Build the app for production
+    npm run build
+
+5. Run Vite in development server
+    npm run dev
+
+---------------------------------------------------
+
+
+=> Install Express
+
+npm install express    or     npm install express@latest
+
+
+nodemon server.js
+
+=> import
+
+import express from 'express';
+--------------------------------------------------
+
+
+=> Ensure Email/Password Authentication
+Make sure you have enable Email/Password authentication in your Firebase Console.
+
+Authentication > Sign-in Method
+Ensure Email/Password is enabled.
+Save the changes
+
+
+=> Ensure Google Sign-in in Firebase Console
+
+Authentication > Sign-in Method
+Enable  Google under the list of providers
+
+Public-facing name for project = your firebase project id
+Support email for project = your firebase gmail address
+Save the changes
+
+-----------------------------------------------------------------
+
+
+=> Custimize the Password Reset Email Template
+you can customize the password reset email link to redirected user to a specific page in your app.
+
+Authentication > templates > Password reset > Click Edit pen
+
+-----------------------------------------------------------------
+
+
+=> How to install Tailwind Css
+
+1. Install Tailwind CSS
+https://tailwindcss.com/
+https://tailwindcss.com/docs/installation/using-postcss
+
+npm install tailwindcss @tailwindcss/postcss postcss
+
+2.Add Tailwind to your PostCSS configuration
+create postcss.config.js manually ( Note: do not forgot to export as ES6 )
+
+export default {
+  plugins: {
+    "@tailwindcss/postcss": {},
+  }
+}
+
+3. Add the Tailwind directives to your CSS
+create a css file located to (eg. src/css/main.css)
+@import "tailwindcss";
+
+4. include css link to each html files
+<link href="./css/main.css" rel="stylesheet" type="text/css">
+
+npm run build 
+npm run dev
+--------------------------------------------------
+
+
+
+
+=> Install Date-fns
+
+1. Install
+https://date-fns.org/docs/Getting-Started
+
+npm install date-fns --save
+
+2. import in src/main.js or src/js/uielement.js and src/js/lielement.js
+
+import { format, compareAsc } from "date-fns";
+
+const formatteddate = format(new Date(createdtime), "do MMM yyy");
+
+----------------------------------------------------------------------
+
+
+=> Install Fontawesome 5
+
+1. Install
+npm install @fortawesome/fontawesome-free
+
+2. import in src/main.js or src/js/authsigninapp.js and src/js/app.js
+import "@fortawesome/fontawesome-free/css/all.min.css";
+
+----------------------------------------------------------------------
+
+=> Deploy on Cloud Server
+
+1. your project need Repo public/private to Github
+
+2. signin your account to https://render.com/
+
+3.Prepare the build output
+    your project must builded and typically located in the "dist" directory
+
+4. Create a new static site
+    click > "New +" > Static Site > Github > your account > choose repo > click connect
+
+5. Name: publicchatroom
+   Branch: main
+   Build Command: npm run build   ( React, Vue, vite, etc,...) , ng build ( Angular )
+   Public Directory : dist
+   Start Command : node server.js
+
+6. Environment Variables = copy paste .env data to Environment Variables
