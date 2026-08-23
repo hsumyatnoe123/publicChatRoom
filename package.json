@@ -1,0 +1,26 @@
+{
+  "name": "l15npmchatroom-auth",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^7.3.1",
+    "@tailwindcss/postcss": "^4.3.3",
+    "date-fns": "^4.4.0",
+    "express": "^5.2.1",
+    "firebase": "^12.18.0",
+    "postcss": "^8.5.26",
+    "tailwindcss": "^4.3.3"
+  },
+  "devDependencies": {
+    "vite": "^8.2.2"
+  }
+}
