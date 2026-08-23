@@ -1,0 +1,1 @@
+import{t as e}from"./main-YkqmDQIM.js";document.getElementById(`signupform`).addEventListener(`submit`,t=>{t.preventDefault();let n=document.getElementById(`fullname`).value.trim(),r=document.getElementById(`email`).value.trim(),i=document.getElementById(`password`).value.trim();e().registerUser(n,r,i)});
